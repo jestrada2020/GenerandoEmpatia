@@ -271,6 +271,44 @@
                 transform: translateX(0);
             }
         }
+
+        /* Estilos para el carrusel de videos */
+        .video-slider {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 250px;
+            height: calc(100vh - 60px);
+            background-color: #f1f1f1;
+            overflow-y: auto;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 800;
+        }
+
+        .video-slider .video-thumbnail {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-slider .video-thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-slider .video-thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-slider .video-thumbnail.active {
+            border: 2px solid #4CAF50;
+        }
     </style>
 </head>
 <body>
@@ -291,16 +329,38 @@
         <a href="#inicio" class="sidebar-link active">Bienvenidos</a>
         <a href="#introduccion" class="sidebar-link">¿Por qué estos videos?</a>
         <a href="#videos-ciencia" class="sidebar-link">Videos de Ciencia</a>
-        <a href="#video1" class="sidebar-link">La Cosa Más Útil de la IA</a>
-        <a href="#video2" class="sidebar-link">Estamos perdiendo la guerra de la IA</a>
-        <a href="#video3" class="sidebar-link">IA y Física Cuántica</a>
-        <a href="#video4" class="sidebar-link">Probamos un ORDENADOR CUÁNTICO</a>
-        <a href="#video5" class="sidebar-link">Cómo se programa un ORDENADOR CUÁNTICO</a>
-        <a href="#video6" class="sidebar-link">El Problema Sin Resolver Más Antiguo En Matemáticas</a>
-        <a href="#video7" class="sidebar-link">¿Qué es una Red Neuronal? | Aprendizaje Profundo.</a>
-        <a href="#video8" class="sidebar-link">Descenso de Gradiente. Cómo Aprenden las Redes Neuronales | Aprendizaje Profundo.</a>
-        <a href="#video9" class="sidebar-link">Cómo 8 CIENTÍFICOS ANÓNIMOS inventaron la IA Generativa</a>
         <a href="#contacto" class="sidebar-link">Contacto</a>
+    </div>
+
+    <!-- Carrusel de videos -->
+    <div class="video-slider" id="videoSlider">
+        <div class="video-thumbnail active" data-video="video1">
+            <img src="https://img.youtube.com/vi/XhExzm_rWxk/mqdefault.jpg" alt="La Cosa Más Útil de la IA">
+        </div>
+        <div class="video-thumbnail" data-video="video2">
+            <img src="https://img.youtube.com/vi/4urZchNYK3U/mqdefault.jpg" alt="Estamos perdiendo la guerra de la IA">
+        </div>
+        <div class="video-thumbnail" data-video="video3">
+            <img src="https://img.youtube.com/vi/MYNw0Ei8eWs/mqdefault.jpg" alt="IA y Física Cuántica">
+        </div>
+        <div class="video-thumbnail" data-video="video4">
+            <img src="https://img.youtube.com/vi/8stprlSar_4/mqdefault.jpg" alt="Probamos un ORDENADOR CUÁNTICO">
+        </div>
+        <div class="video-thumbnail" data-video="video5">
+            <img src="https://img.youtube.com/vi/eRlQdW1lgJE/mqdefault.jpg" alt="Cómo se programa un ORDENADOR CUÁNTICO">
+        </div>
+        <div class="video-thumbnail" data-video="video6">
+            <img src="https://img.youtube.com/vi/W_d6M0FacwQ/mqdefault.jpg" alt="El Problema Sin Resolver Más Antiguo En Matemáticas">
+        </div>
+        <div class="video-thumbnail" data-video="video7">
+            <img src="https://img.youtube.com/vi/jKCQsndqEGQ/mqdefault.jpg" alt="¿Qué es una Red Neuronal?">
+        </div>
+        <div class="video-thumbnail" data-video="video8">
+            <img src="https://img.youtube.com/vi/mwHiaTrQOiI/mqdefault.jpg" alt="Descenso de Gradiente">
+        </div>
+        <div class="video-thumbnail" data-video="video9">
+            <img src="https://img.youtube.com/vi/HX8IMpnESxk/mqdefault.jpg" alt="Cómo 8 CIENTÍFICOS ANÓNIMOS inventaron la IA Generativa">
+        </div>
     </div>
 
     <!-- Contenido principal -->
@@ -337,137 +397,122 @@
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
         <div class="video-card" id="video2">
-            <h3></h3>
-            <p></p>
+            <h3>Estamos perdiendo la guerra de la IA</h3>
+            <p>Este video analiza los desafíos actuales en la carrera por el desarrollo de la inteligencia artificial y las implicaciones éticas y sociales de esta competencia.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/4urZchNYK3U?si=4T36Xo4aJg9cKEyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
         <div class="video-card" id="video3">
-            <h3></h3>
-            <p></p>
+            <h3>IA y Física Cuántica</h3>
+            <p>Este video explora la intersección entre la inteligencia artificial y la física cuántica, y cómo estas dos áreas están revolucionando la tecnología.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/MYNw0Ei8eWs?si=EU7UjKmDsp-XHdJb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
         <div class="video-card" id="video4">
-            <h3></h3>
-            <p></p>
+            <h3>Probamos un ORDENADOR CUÁNTICO</h3>
+            <p>Este video muestra cómo funciona un ordenador cuántico y las pruebas realizadas para entender su potencial.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/8stprlSar_4?si=ufC27AlvbExo0-eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
         <div class="video-card" id="video5">
-            <h3></h3>
-            <p></p>
+            <h3>Cómo se programa un ORDENADOR CUÁNTICO</h3>
+            <p>Este video explica los fundamentos de la programación cuántica y cómo se diferencia de la programación clásica.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/eRlQdW1lgJE?si=ixLFo6N5PjA2Z5ev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
-
-
         <div class="video-card" id="video6">
-            <h3></h3>
-            <p></p>
+            <h3>El Problema Sin Resolver Más Antiguo En Matemáticas</h3>
+            <p>Este video aborda uno de los problemas matemáticos más antiguos y cómo los científicos están trabajando para resolverlo.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/W_d6M0FacwQ?si=sH5o8sUvq6dhQCh9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
-
-
         <div class="video-card" id="video7">
-            <h3></h3>
-            <p></p>
+            <h3>¿Qué es una Red Neuronal? | Aprendizaje Profundo.</h3>
+            <p>Este video explica qué es una red neuronal y cómo funciona en el contexto del aprendizaje profundo.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jKCQsndqEGQ?si=rYTrjPTPXrb3E5lW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
-
-
-
-
-
         <div class="video-card" id="video8">
-            <h3></h3>
-            <p></p>
+            <h3>Descenso de Gradiente. Cómo Aprenden las Redes Neuronales | Aprendizaje Profundo.</h3>
+            <p>Este video explica el concepto de descenso de gradiente y cómo es fundamental para el aprendizaje de las redes neuronales.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/mwHiaTrQOiI?si=5pPcEDcZS26GdFT5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
         </div>
 
-
         <div class="video-card" id="video9">
-            <h3></h3>
-            <p></p>
+            <h3>Cómo 8 CIENTÍFICOS ANÓNIMOS inventaron la IA Generativa</h3>
+            <p>Este video cuenta la historia de cómo un grupo de científicos desarrolló la inteligencia artificial generativa.</p>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/HX8IMpnESxk?si=gxhIg94NdFj-GOX3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div class="video-reflection">
                 <h4>Reflexión:</h4>
-                <p>¿Qué impacto crees que tendrán esta información? </p>
+                <p>¿Qué impacto crees que tendrá esta información? </p>
                 <p>¿Cuáles son los beneficios y posibles desafíos éticos que presenta esta tecnología?</p>
             </div>
-        </div>        
-
-       
-
-
-
+        </div>
 
         <div class="contact-section" id="contacto">
             <h2>Contacto</h2>
@@ -550,6 +595,29 @@
                 const offsetTop = targetElement.offsetTop - 70;
                 
                 // Desplazarse suavemente a la posición
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Función para manejar el carrusel de videos
+        document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                // Remover la clase 'active' de todas las miniaturas
+                document.querySelectorAll('.video-thumbnail').forEach(t => t.classList.remove('active'));
+                
+                // Agregar la clase 'active' a la miniatura seleccionada
+                this.classList.add('active');
+                
+                // Obtener el ID del video seleccionado
+                const videoId = this.getAttribute('data-video');
+                
+                // Desplazarse suavemente a la sección del video seleccionado
+                const targetElement = document.getElementById(videoId);
+                const offsetTop = targetElement.offsetTop - 70;
+                
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
